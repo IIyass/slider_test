@@ -16,7 +16,7 @@ const Slider = () => {
             else {
                 setIndex(0)
             }
-        }, 1000);
+        }, 10000);
         return () => clearTimeout(timer);
     }, [Index])
 
