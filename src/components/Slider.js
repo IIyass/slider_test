@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Transition } from 'react-transition-group';
 import * as Style from './style'
 import Data from '../Data'
+
 
 const Slider = () => {
 
@@ -31,7 +32,7 @@ const Slider = () => {
                 })}
                 <Style.MobileToggle>
                     {Data.map(({ line, content, title }, index) => {
-                        return <Style.Toggle color={index === Index} />
+                        return <Style.Toggle onClick={() => setIndex(index)} color={index === Index} />
                     })}
                 </Style.MobileToggle>
             </Style.Visualise>
