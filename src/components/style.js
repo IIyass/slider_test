@@ -39,6 +39,7 @@ margin:0 auto;
 export const Lines = styled.div`
 width:35%;
 height:100%;
+padding:0px 50px;
 position:absolute;
 z-index:1000;
 background-color:#fff;
@@ -67,6 +68,7 @@ background-color:#eee;
 height:100%;
 visibility:${({ display }) => display ? 'visible' : 'hidden'};
 flex:1;
+
 img{
 width:100%;
 height:auto;
