@@ -39,7 +39,7 @@ margin:0 auto;
 export const Lines = styled.div`
 width:35%;
 height:100%;
-padding:0px 50px;
+padding:0px 40px;
 position:absolute;
 z-index:1000;
 background-color:#fff;
