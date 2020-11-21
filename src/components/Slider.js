@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Transition } from 'react-transition-group';
 import * as Style from './style'
 import Data from '../Data'
 
@@ -9,24 +8,25 @@ const Slider = () => {
     const [Index, setIndex] = useState(0);
 
     useEffect(() => {
-        setTimeout(() => {
+
+        const timer = setTimeout(() => {
             if (Index < Data.length - 1) {
                 setIndex(Index + 1)
             }
             else {
                 setIndex(0)
             }
-        }, 3000)
+        }, 1000);
+        return () => clearTimeout(timer);
     }, [Index])
 
-
+    console.log(Data.length)
     return (
         <Style.SliderWrapper>
             <Style.Visualise Index={Index} tot={Data.length}>
                 {Data.map(({ line, content, title }, index) => {
                     return <Style.Container display={index === Index}>
                         <img src={line} />
-                        <h1>{title}</h1>
                         <p>{content}</p>
                     </Style.Container>
                 })}

@@ -78,6 +78,8 @@ h1{
 color:#7f92b9;
 font-size:20px;
 padding:0px 40px;
+margin-left:0px;
+padding-left:20px;
 }
 p{
 color:#3b3b3b;
