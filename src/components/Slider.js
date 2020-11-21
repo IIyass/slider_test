@@ -22,9 +22,9 @@ const Slider = () => {
 
     return (
         <Style.SliderWrapper>
-            <Style.Visualise>
+            <Style.Visualise Index={Index} tot={Data.length}>
                 {Data.map(({ line, content, title }, index) => {
-                    return index === Index && <Style.Container>
+                    return <Style.Container display={index === Index}>
                         <img src={line} />
                         <h1>{title}</h1>
                         <p>{content}</p>
